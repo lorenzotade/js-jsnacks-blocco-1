@@ -70,3 +70,34 @@ for (var i = 0; i < 6; i++) {
 }
 
 console.log(numbers);
+
+/********** JSNACK 6 ***********/
+
+// chiedo all'utente di inserire un numero
+var numero = parseInt(prompt("Inserisci un numero:"));
+// inizializzo una variabile somma
+var somma = 0;
+
+// con un ciclo for da 1 al numero utente motiplico al cubo ogni numero e lo sommo ogni volta
+for (i = 1; i <= numero; i++) {
+  var cubo = Math.pow(i, 3);
+  // stampo i cubi
+  console.log(cubo);
+  somma += cubo;
+}
+
+// stampo la somma totale
+console.log("La somma dei cubi è: " + somma);
+
+/********** JSNACK 7 ***********/
+
+// creo una variabile numero che parta da 1
+var numero = 1;
+
+// con un ciclo while fino a che il quadrato del numero è inferiore a 1000 stampo il quadrato dei numeri incrementando di 1 ogni volta
+while (Math.pow(numero, 2) < 1000) {
+  var quadrato = Math.pow(numero, 2);
+  console.log("Il quadrato di " + numero + " è uguale a: " + quadrato);
+  console.log("====================")
+  numero++;
+}
