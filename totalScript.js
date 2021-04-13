@@ -101,3 +101,42 @@ while (Math.pow(numero, 2) < 1000) {
   console.log("====================")
   numero++;
 }
+
+/********** JSNACK 8 ***********/
+
+// chiedo all'utente di inserire un numero di quattro cifre e lo salvo in una variabile
+var numero = parseInt(prompt("Inserisci un numero di quattro cifre:"))
+// inizializzo una variabile somma
+var somma = 0;
+
+/* con un ciclo while che gira fino a che il numero è diverso da zero, a "somma" sommo se stesso più il resto della divisione del numero per 10, cioè quello che rimane dopo la virgola (l'ultima cifra di esso). A questo punto divido il numero per 10 arrotondandolo per difetto quindi togliendo ad ogni giro il decimale che ho utilizzato in precedenza. Quando utilizzo l'ultima cifra il numero è uguale a 0 per cui la condizione diventa falsa ed il ciclo while si ferma */
+while (numero) {
+  somma += numero % 10;
+  numero = Math.floor(numero / 10);
+}
+
+// stampo a video la somma delle cifre
+console.log(somma);
+
+/********** JSNACK 9 ***********/
+
+// inizializzo un array e lo popolo con i primi 10 numeri
+var numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// inizializzo una variabile somma e una variabile media
+var somma = 0;
+var media = 0;
+
+// con un ciclo for sommo i numeri presenti all'interno dell'array
+for (i = 0; i < numeri.length; i++) {
+  var n = numeri[i];
+  somma += n;
+}
+// stampo a video la somma dei numeri
+console.log("La somma dei numeri è: " + somma);
+
+// salvo all'interno della variabile la media dei numeri presenti nell'array 
+media = somma / numeri.length;
+
+// stampo a video la media
+console.log("La media è: " + media);
